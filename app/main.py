@@ -7,8 +7,18 @@ from app.api.v1.voice import router as voice_router
 from app.api.v1.video import router as video_router
 from app.services.database import engine
 from app.schemas import user, history
+from fastapi.middleware.cors import CORSMiddleware 
 
-app = FastAPI(title="My FastAPI App")
+app = FastAPI(title="My AI Chat App")
+
+# CORS for Swagger UI and clients
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Restrict in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Create tables
 user.Base.metadata.create_all(bind=engine)
