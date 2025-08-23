@@ -1,10 +1,10 @@
-fastapi 
-uvicorn
-python-jose[cryptography]
-passlib[bcrypt]
-python-dotenv
-sqlalchemy
-python-multipart
-speechrecognition
-googletrans==3.1.0a0
-gtts
+fastapi[standard]>=0.115.4  # Includes uvicorn, python-multipart
+gunicorn==22.0.0            # Optional, for production-grade serving
+sqlalchemy==2.0.35
+python-dotenv==1.0.1
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.3
+google-generativeai==0.8.3
+gtts==2.5.3
+psycopg2-binary==2.9.10

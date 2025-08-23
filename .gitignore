@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.Python
+
+# Environment
+.env
+*.env
+env/
+venv/
+ai-chat-venv/
+
+# Database
+*.db  # SQLite files (e.g., sqlite.db)
+*.sqlite3
+
+# IDE and editor files
+.vscode/
+.idea/
